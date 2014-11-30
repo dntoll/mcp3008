@@ -9,7 +9,7 @@ int main()
 	mcp3008 inst;
 	
 	
-	int value = inst.readValue();
+	int value = inst.readValue(0);
 	
 	cout << "Read some value \n[" << value << "]";	
 	

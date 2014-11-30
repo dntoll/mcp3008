@@ -7,7 +7,7 @@ class mcp3008 {
 public:
 	mcp3008();
 
-	int readValue();
+	int readValue(unsigned int adcnum);
 private:
 	//# SPI connection, these are only for documentation...
 	static const unsigned char SCE  = 11;// # gpio pin  = wiringpi no. 11 (CE1 BCM 7) 
@@ -16,6 +16,6 @@ private:
 
 
 	static const int spiChannel = 1;
-	static const int spiSpeed = 8000000;
+	static const int spiSpeed = 1000000;
 
 };
