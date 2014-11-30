@@ -4,7 +4,7 @@
 #include <stdlib.h>     /* exit, EXIT_FAILURE */
 
 mcp3008::mcp3008() {
-	fileDescriptor = wiringPiSPISetup(spiChannel, spiSpeed);
+	int fileDescriptor = wiringPiSPISetup(spiChannel, spiSpeed);
         if (fileDescriptor <= -1) {
              printf ("Error wiringPiSPISetup");
 	    exit (EXIT_FAILURE);
@@ -14,8 +14,8 @@ mcp3008::mcp3008() {
 
 int mcp3008::readValue() {
 	unsigned char data[100];
-
-	if (wiringPiSPIDataRW(spiChannel, &data, 100) == -1) {
+	unsigned char *p = (unsigned char *)&data;
+	if (wiringPiSPIDataRW(spiChannel, p, 100) == -1) {
 		printf("spi failed lcd_data");
 	}
 	return data[0];
