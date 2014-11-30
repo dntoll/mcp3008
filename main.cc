@@ -8,7 +8,7 @@ int main()
 {
 	mcp3008 inst;
 
-	int value = inst.readValues();
+	int value = inst.readValue();
 	
 	cout << "Read some value \n" << value;	
 	
