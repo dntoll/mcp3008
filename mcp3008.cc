@@ -15,7 +15,7 @@ mcp3008::mcp3008() {
 
 int mcp3008::readValue(unsigned int adcnum)
 {
- 	uint8_t buff[3];
+ 	unsigned char buff[3];
 	int adc;
 	if ((adcnum > 7) || (adcnum < 0))
 		return -1;
