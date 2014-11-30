@@ -18,6 +18,11 @@ int mcp3008::readValue() {
 	if (wiringPiSPIDataRW(spiChannel, p, 100) == -1) {
 		printf("spi failed lcd_data");
 	}
+
+	for (int i = 0; i< 100; i++) {
+		printf("data read %d", data[i]);
+	}
+	
 	return data[0];
 }
 

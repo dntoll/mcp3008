@@ -7,10 +7,11 @@ using namespace std;
 int main()
 {
 	mcp3008 inst;
-
+	
+	
 	int value = inst.readValue();
 	
-	cout << "Read some value \n" << value;	
+	cout << "Read some value \n[" << value << "]";	
 	
 	return 0;
 }
