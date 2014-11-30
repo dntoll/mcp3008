@@ -20,7 +20,7 @@ int mcp3008::readValue() {
 	}
 
 	for (int i = 0; i< 100; i++) {
-		printf("data read %d", data[i]);
+		printf("%d,", data[i]);
 	}
 	
 	return data[0];
