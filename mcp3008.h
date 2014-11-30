@@ -16,6 +16,6 @@ private:
 
 
 	static const int spiChannel = 1;
-	static const int spiSpeed = 32000000;
+	static const int spiSpeed = 8000000;
 
 };
